@@ -1,0 +1,19 @@
+{
+  "name": "Music-list-directive",
+  "version": "0.0.0",
+  "description": "Nothing for the moment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OUARRICH/Music-list-directive.git"
+  },
+  "author": "OUARRICH Said [warichsaid@gmail.com]",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OUARRICH/Music-list-directive/issues"
+  },
+  "homepage": "https://github.com/OUARRICH/Music-list-directive"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Music-list-directive",
+  "description": "Nothing for the moment",
+  "main": "index.js",
+  "authors": [
+    "OUARRICH Said [warichsaid@gmail.com]"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/OUARRICH/Music-list-directive",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
