@@ -1,0 +1,202 @@
+.music-list{
+	height : auto;
+	border: 1px solid #eee;
+	background-color: #181818;
+	color: #a0a0a0;
+	width: auto;
+	max-width: 500px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none;   /* Chrome/Safari/Opera */
+	-khtml-user-select: none;    /* Konqueror */
+	-moz-user-select: none;      /* Firefox */
+	-ms-user-select: none;       /* Internet Explorer/Edge */
+	user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+.current-artist{
+	height: 80px;
+	width: inherit;
+	background-color: #282828;
+	margin-bottom: 1px;
+	display:flex;
+}
+.current-artist .image{
+	flex: 2;
+	background: url(../assets/khaled.png) no-repeat 0 0;
+	background-size: 80px 80px;
+	cursor: pointer;
+}
+.current-artist .info{
+	flex:  7;
+	padding: 10px;
+}
+.current-artist .info .title{
+	color: #fff;
+	display: block;
+}
+.current-artist .info .name{;
+}
+.current-artist .info .complement{
+	position: relative;
+	top: 15px;
+}
+.current-artist .info .complement .ico-music{
+	/*content: '';*/
+    display: inline-block;
+    background: url(../assets/Music-512.png) no-repeat 0 0;
+    background-size: 15px 15px;
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+    margin-right: 4px;
+    position: relative;
+    top: -2px;
+}
+.current-artist .info .complement .next-previous{
+	display: flex;
+}
+.current-artist .info .complement .play-progress{
+    height: 5px;
+    position: relative;
+    top: 6px;
+	background: #555;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	padding: 1px;
+	box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+	flex:12;
+}
+.current-artist .info .complement .next,
+.current-artist .info .complement .previous{
+	height:20px;
+	background-size: 20px  20px;
+	cursor:pointer;
+}
+.current-artist .info .complement .current-time,
+.current-artist .info .complement .next,
+.current-artist .info .complement .previous{
+	flex:1;
+}
+.current-artist .info .complement .current-time{
+	font-size: 11px;
+    position: relative;
+    top: 3px;
+}
+.current-artist .info .complement .previous{
+	background: url(../assets/prev-20.png) no-repeat 0 0;
+}
+.current-artist .info .complement .next{
+	background: url(../assets/next-20.png) no-repeat 0 0;
+}
+.current-artist .info .complement .play-progress > span{
+	display: block;
+	height: 100%;
+	width:27%;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	background-color: rgb(43,194,83);
+	background-image: linear-gradient(
+	center bottom,
+	rgb(43,194,83) 37%,
+	rgb(84,240,84) 69%
+	);
+	box-shadow: 
+	inset 0 2px 9px  rgba(255,255,255,0.3),
+	inset 0 -2px 6px rgba(0,0,0,0.4);
+	position: relative;
+	overflow: hidden;
+}
+.current-artist .spotify-button{
+	flex: 1;
+}
+.current-artist .spotify-button .logo{
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4wLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAxNjcuNSAxNjcuNSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTY3LjUgMTY3LjU7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+DQoJLnN0MHtmaWxsOiMxRUQ3NjA7fQ0KPC9zdHlsZT4NCjxnPg0KCTxnPg0KCQk8Zz4NCgkJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik04My43LDBDMzcuNSwwLDAsMzcuNSwwLDgzLjdjMCw0Ni4zLDM3LjUsODMuNyw4My43LDgzLjdjNDYuMywwLDgzLjctMzcuNSw4My43LTgzLjcNCgkJCQlDMTY3LjUsMzcuNSwxMzAsMCw4My43LDB6IE0xMjIuMSwxMjAuOGMtMS41LDIuNS00LjcsMy4yLTcuMiwxLjdjLTE5LjctMTItNDQuNC0xNC43LTczLjYtOC4xYy0yLjgsMC42LTUuNi0xLjEtNi4yLTMuOQ0KCQkJCWMtMC42LTIuOCwxLjEtNS42LDMuOS02LjJjMzEuOS03LjMsNTkuMy00LjIsODEuMyw5LjNDMTIyLjksMTE1LjEsMTIzLjcsMTE4LjMsMTIyLjEsMTIwLjh6IE0xMzIuNCw5OGMtMS45LDMuMS01LjksNC05LDIuMg0KCQkJCUMxMDAuOSw4Ni4zLDY2LjYsODIuMyw0MCw5MC40Yy0zLjUsMS03LjEtMC45LTguMS00LjNjLTEtMy41LDAuOS03LjEsNC40LTguMWMzMC40LTkuMiw2OC4yLTQuOCw5NC4xLDExLjENCgkJCQlDMTMzLjMsOTAuOSwxMzQuMyw5NC45LDEzMi40LDk4eiBNMTMzLjMsNzQuMmMtMjctMTYtNzEuNS0xNy41LTk3LjMtOS43Yy00LjEsMS4zLTguNS0xLjEtOS44LTUuMmMtMS4zLTQuMSwxLjEtOC41LDUuMi05LjgNCgkJCQljMjkuNi05LDc4LjgtNy4yLDEwOS44LDExLjJjMy43LDIuMiw0LjksNywyLjcsMTAuN0MxNDEuOCw3NS4yLDEzNyw3Ni40LDEzMy4zLDc0LjJ6Ii8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==)
+				no-repeat 0 0;
+	background-size: 20px 20px;
+	width: 20px;
+	height: 20px;
+	position: relative;
+    top: 38px;
+    right: -14px;
+    cursor: pointer;
+}
+.current-artist .spotify-button span:before{
+	content:'</>';
+	position: relative;
+	left: 14px;
+    top: 3px;
+    cursor: pointer;
+}
+.current-artist .spotify-button span:hover:before{
+	color: #fff;
+}
+.item{
+	height:46px;
+	border-bottom: 1px solid #282828;
+	cursor: pointer;
+	display: flex;
+}
+.item .duration, .item .order{
+	flex: 1;
+}
+.item .artist{
+	flex: 8;
+}
+.item .order:hover:after {
+    content: '';
+    background: url(../assets/arrow-right2-128.png) no-repeat 0 0;
+    background-size: 28px 28px;
+    display: inline-block;
+    position: relative;
+    background-color: #404040;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    height: 28px;
+    left: 8px;
+    top: -8px;
+    width: 28px;
+}
+.item .artist span:first-of-type{
+	color: #fff;
+}
+.item .duration span, .item .order span, .item .artist span{
+	display: block;
+    position: relative;
+    top: 13px;
+}
+.item .order span{
+    left: 18px;
+}
+.item .artist span{
+	top: 9px;
+}
+.item:hover{
+	background-color: #282828;
+}
+.music-list ul{
+	height: auto;
+	max-height: 400px;
+	width: inherit;
+	list-style-type: none;
+	padding: 0;
+	margin:0;
+	overflow-x: hidden;
+	overflow-y:hidden;
+}
+.music-list ul:hover{
+	overflow-y:scroll;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track-piece {
+    background: #888;
+}
+::-webkit-scrollbar-thumb {
+    background: #6e6e6e;
+}
